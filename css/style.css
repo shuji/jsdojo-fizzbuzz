@@ -27,7 +27,7 @@ img {
 }
 
 #showNumberBox{
- margin: 40px auto;
+ margin: 20px auto;
  background-color: #CD0E51;
  height: 150px;
  width: 150px;
@@ -44,13 +44,13 @@ img {
   padding-top: 20px;
   margin: 0 auto;
   color: #FFF;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 #answer{
   padding: 0.3em;
   font-size: 14px;
   font-size: 21px;
   font-weight: 300;
-  max-width: 35em;
   height: 44px;
   border: 1px solid #ccc;
   background: #fcfcfc;
@@ -58,9 +58,99 @@ img {
 }
 
 #judge{
+  width: 120px;
+  display: block;
   height: 55px;
+  margin: 10px auto;
+}
+
+#soulgemBox{
+  position: relative;
+  z-index: 100;
+  width:120px;
+  margin:20px auto;
+  text-align: center;
+}
+#soulgem{
+  width:105px;
+  height: 185px;
+  background: #000;
+  margin:0 auto;
 }
 
 
+/******************************************************
+ * QB
+ *****************************************************/
+.qb {
+  width: 465px;
+  height: 50px;
+  position: relative;
+  margin: 10px auto; 
 
+}
 
+.qb div {
+  position: absolute;
+}
+.qb .head {
+  background: #fff;
+  width: 160px;
+  height: 120px;
+  left: 145px;
+  top: 40px;
+  z-index: 3;
+}
+
+.qb .eye{
+  background: #ed3a7d;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #721c2b;
+  border-radius: 28px;
+  -moz-border-radius: 28px;
+  
+  z-index: 5;
+}
+
+.qb .eye .small-eye{
+  background: #9a0e43;
+  width: 26px;
+  height: 26px;
+  border-radius: 14px;
+  -moz-border-radius: 14px;
+  -webkit-box-shadow: 0px 0px 6px #721c2b;
+  -moz-box-shadow: 0px 0px 6px #721c2b;
+  box-shadow: 0px 0px 6px #721c2b;
+  left: 14px;
+  top: 14px;
+}
+
+.qb .eye .reflection{
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  background: -webkit-gradient(radial, 5 5, 0, 5 5, 5, 
+    from(white), 
+    color-stop(50%, white),
+    to(rgba(255, 255, 255, 0.5)));
+  background: -moz-radial-gradient(center , circle, white 0%, white 30%, rgba(255, 255, 255, 0));
+  background: -webkit-radial-gradient(center , circle, white 0%, white 30%, rgba(255, 255, 255, 0));
+  background: -o-radial-gradient(center , circle, white 0%, white 30%, rgba(255, 255, 255, 0));
+
+  box-shadow: 0px 0px 6px white;
+  left: 30px;
+  top: 6px;
+}
+
+.qb .eye.left{
+  left: -100px;
+  top: 35px;
+}
+
+.qb .eye.right{
+  left: 210px;
+  top: 35px;
+}
