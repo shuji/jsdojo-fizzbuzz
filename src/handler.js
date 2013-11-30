@@ -1,5 +1,5 @@
 $(function() {
-	var model = FizzBuzz;
+	var model = new FizzBuzz();
 	var setup = function() {
 		var num = model.getNumber();
 		$('#showNumber').text(num);
@@ -16,6 +16,6 @@ $(function() {
 	};
 	$('#judge').on('click', judge);
 	setup();
-})
+});
 
 
