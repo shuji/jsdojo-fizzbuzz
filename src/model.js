@@ -1,7 +1,12 @@
+App.FizzBuzzResult = Ember.Object.extend({
+	success : true
+});
+
 App.FizzBuzz = Ember.Object.extend({
 	number : undefined,
 	besePoint : 10,
 	point : undefined,
+	results : Ember.ArrayProxy.create({ content: Ember.A([]) }),
 	setNewNumer : function (max /* Option max number default 100 */) {
 		if (max === undefined) {
 			max = 100;
@@ -42,6 +47,12 @@ App.FizzBuzz = Ember.Object.extend({
 		}
 		if (!rtn) {
 			this.incrementProperty('point',-1);
+			this.get('results').addObject(App.FizzBuzzResult.create({
+				success : false
+			}));
+		}
+		else {
+			this.get('results').addObject(App.FizzBuzzResult.create());
 		}
 		return rtn;
 	},

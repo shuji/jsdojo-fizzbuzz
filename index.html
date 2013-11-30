@@ -45,6 +45,13 @@
 {{input value=answer }}
 <input id="judge" type="button" value="判定" {{action 'judge'}} >
 <p class="resultMessage">{{resultMessage}}</p>
+{{#each results}}
+{{#if success}}
+	<span><img src="./images/madoka.gif" alt="ﾏﾄﾞｶｰｰｰ" width="25" height="25"></span>
+{{else}}
+	<span><img src="./images/homura.gif" alt="ﾎﾑﾗﾁｬﾝ" width="25" height="25"></span>
+{{/if}}
+{{/each}}
 <p>{{jemColorStyle}}</p>
 </div>
 </div>
