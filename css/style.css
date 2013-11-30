@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+  font-family: 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック','Lucida Grande', 'Lucida Sans Unicode', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Helvetica, Arial, Verdana, sans-serif;
+  font-size:12px;
+  text-align: center;
+  line-height: 1.8; 
+}
+
+img {
+  font-size: 0;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+#header{
+  width:100%;
+  height: auto;
+  padding: 10px 0;
+  text-align: center;
+  background: #CD0E51;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+#showNumberBox{
+ margin: 40px auto;
+ background-color: #CD0E51;
+ height: 150px;
+ width: 150px;
+ border-radius:75px;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+
+}
+
+#showNumber{
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
+  padding-top: 20px;
+  margin: 0 auto;
+  color: #FFF;
+}
+#answer{
+  padding: 0.3em;
+  font-size: 14px;
+  font-size: 21px;
+  font-weight: 300;
+  max-width: 35em;
+  height: 44px;
+  border: 1px solid #ccc;
+  background: #fcfcfc;
+  width: 120px;
+}
+
+#judge{
+  height: 55px;
+}
+
+
+
+
