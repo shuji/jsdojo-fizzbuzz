@@ -6,29 +6,33 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<script type="text/x-handlebars"  data-template-name="fizzBuzz">	
 <div id="wrapper">
 <div id="header">
 僕と契約してFizz Buzzやってよ！	
 </div>
 
 <div id="main">
-
 <div id="showNumberBox">
-<div id="showNumber">
-100
-</div>
+<div id="showNumber">{{number}}</div>
+{{title}}
 </div>
 
 <div id="inputArea">
-<input id="answer" type="text" x-webkit-speech>
-<input id="judge" type="button" value="判定">
+{{input value=answer }}
+<input id="judge" type="button" value="判定" {{action 'judge'}} >
+
+<p>{{resultMessage}}</p>
 </div>
 </div>
 
 </div><!-- /wrapper -->
+</script>
 <script type="text/javascript" src="./lib/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./lib/handlebars-1.1.2.js"></script>
+<script type="text/javascript" src="./lib/ember-1.2.0.js"></script>
+<script type="text/javascript" src="./src/application.js"></script>
 <script type="text/javascript" src="./src/model.js"></script>
-<script type="text/javascript" src="./src/handler.js"></script>
 </body>
 </html>
 

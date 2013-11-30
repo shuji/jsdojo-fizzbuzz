@@ -1,11 +1,13 @@
-function FizzBuzz() {
-	this.getNumber = function (max /* Option max number default 100 */) {
+App.FizzBuzz = Ember.Object.extend({
+	number : undefined,
+	setNewNumer : function (max /* Option max number default 100 */) {
 		if (max === undefined) {
 			max = 100;
 		}
-		return parseInt(Math.random() * max,10);
-	};
-	this.judge = function (num , answer) {
+		this.set('number', parseInt(Math.random() * max,10));
+	},
+	judge : function (answer) {
+		var num = this.get('number');
 		var rtn = true;
 		answer = answer.toLowerCase();
 		switch (answer) {
@@ -31,5 +33,9 @@ function FizzBuzz() {
 				break;
 		}
 		return rtn;
-	};
-}
+	},
+	init : function() {
+		this.setNewNumer();
+	}
+});
+
