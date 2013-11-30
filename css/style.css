@@ -64,6 +64,36 @@ img {
   margin: 10px auto;
 }
 
+#judge{
+  border:1px solid #0675CB;
+  padding: 0px 45px;
+  text-align:center;
+  color: #fff;
+  cursor: pointer;
+  background: #1975C1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1.00, #1573BA), color-stop(0.00, #48A5ED));
+  background: -webkit-linear-gradient(top, #48A5ED 0%, #1573BA 100%);
+  background: -moz-linear-gradient(top, #48A5ED 0%, #1573BA 100%);
+  background: -o-linear-gradient(top, #48A5ED 0%, #1573BA 100%);
+  background: -ms-linear-gradient(top, #48A5ED 0%, #1573BA 100%);
+  background: linear-gradient(top, #48A5ED 0%, #1573BA 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff99c9e5,endColorstr=#ff428ec9);
+  box-shadow: 1px 1px 2px #AAA;
+  -webkit-box-shadow: 1px 1px 2px #AAA;
+  -moz-box-shadow: 1px 1px 2px #AAA;
+  zoom: 1;
+}
+#judge:hover{
+  background: -webkit-linear-gradient(bottom, #48A5ED 0%, #1573BA 100%);
+  background: -moz-linear-gradient(bottom, #48A5ED 0%, #1573BA 100%);
+  background: -o-linear-gradient(bottom, #48A5ED 0%, #1573BA 100%);
+  background: -ms-linear-gradient(bottom, #48A5ED 0%, #1573BA 100%);
+  background: linear-gradient(bottom, #48A5ED 0%, #1573BA 100%);
+}
+
 #soulgemBox{
   position: relative;
   z-index: 100;
@@ -80,6 +110,28 @@ img {
 
 .resultMessage{
   font-size: 24px;
+}
+
+.gameOver{
+  margin-top:100px;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+.gameOver h2{
+  padding: 0;
+  margin: 0;
+}
+.gameOver .qb{
+  height: 0;
+  margin-top:-50px;
+}
+
+.gameOver p{
+  position: relative;
+  z-index: 100;
+  margin-top: 170px;
+  font-size: 60px;
 }
 
 /******************************************************
