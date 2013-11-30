@@ -1,6 +1,6 @@
 App.FizzBuzz = Ember.Object.extend({
 	number : undefined,
-	besePoint : 10,
+	besePoint : 2,
 	point : undefined,
 	setNewNumer : function (max /* Option max number default 100 */) {
 		if (max === undefined) {

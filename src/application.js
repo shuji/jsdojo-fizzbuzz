@@ -1,7 +1,8 @@
 window.App = Ember.Application.create();
 // Router
 App.Router.map(function () {
-  this.resource('fizzBuzz', { path: '/' });
+  this.route('fizzBuzz', { path: '/' });
+  this.route('gameOver', { path: 'gameOver' });
 });
 // Route
 App.FizzBuzzRoute = Ember.Route.extend({
@@ -11,13 +12,21 @@ App.FizzBuzzRoute = Ember.Route.extend({
 		});
 	},
 	setupController: function(controller, model) {
+		var self = this;
 		controller.set('model', model);
 		model.addObserver('point',model,function(sender, key, value, rev){
 			if(this.get('point') > 0) {
 				return;
 			}
-			alert('game over m9(^Д^)');
+			self.transitionTo('gameOver');
 		});
+	}
+});
+// Route
+App.GameOverRoute = Ember.Route.extend({
+	model: function() {
+		console.debug("model");
+		return {};
 	}
 });
 // Controller
