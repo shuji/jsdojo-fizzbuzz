@@ -25,7 +25,6 @@ App.FizzBuzzRoute = Ember.Route.extend({
 // Route
 App.GameOverRoute = Ember.Route.extend({
 	model: function() {
-		console.debug("model");
 		return {};
 	}
 });
@@ -40,18 +39,19 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 		var _basePoint = this.get('besePoint');
 		// 基本値
 		var r = 247,g = 189 ,b = 185;
-		var mul = _point / _basePoint;
-		r *= mul;
-		g *= mul;
-		b *= mul;
-
+		if(_point !== undefined) {
+			var mul = _point / _basePoint;
+			r *= mul;
+			g *= mul;
+			b *= mul;
+		}
 		function exchangeRadix(source) {
 			var num = parseInt(source, 10);
 			var result = num.toString(16);
 			return ("0"+result).slice(-2);
 		}
 
-		return 'background:#'+exchangeRadix(r.toString(16))+exchangeRadix(g.toString(16))+exchangeRadix(b.toString(16));
+		return 'background:#'+exchangeRadix(r)+exchangeRadix(g)+exchangeRadix(b);
 	}.property('model.point','model.basePoint'),
 	actions: {
 		judge: function() {
