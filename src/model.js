@@ -1,10 +1,18 @@
 App.FizzBuzz = Ember.Object.extend({
 	number : undefined,
+	besePoint : 10,
+	point : undefined,
 	setNewNumer : function (max /* Option max number default 100 */) {
 		if (max === undefined) {
 			max = 100;
 		}
 		this.set('number', parseInt(Math.random() * max,10));
+	},
+	setPoint : function(point /* Option max point default 10 */) {
+		if (point === undefined) {
+			point = this.get('besePoint');
+		}
+		this.set('point', point);
 	},
 	judge : function (answer) {
 		var num = this.get('number');
@@ -32,10 +40,14 @@ App.FizzBuzz = Ember.Object.extend({
 				}
 				break;
 		}
+		if (!rtn) {
+			this.incrementProperty('point',-1);
+		}
 		return rtn;
 	},
-	init : function() {
+	init : function(point) {
 		this.setNewNumer();
+		this.setPoint(point);
 	}
 });
 
