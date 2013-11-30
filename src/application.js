@@ -34,7 +34,7 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 
 	answer : '',
 	resultMessage: '',
-	jemColorCode : function(){
+	jemColorStyle : function(){
 		// 体力が低ければ彩度を下げる
 		var _point = this.get('point');
 		var _basePoint = this.get('besePoint');
@@ -51,7 +51,7 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 			return ("0"+result).slice(-2);
 		}
 
-		return '#'+exchangeRadix(r.toString(16))+exchangeRadix(g.toString(16))+exchangeRadix(b.toString(16));
+		return 'background:#'+exchangeRadix(r.toString(16))+exchangeRadix(g.toString(16))+exchangeRadix(b.toString(16));
 	}.property('model.point','model.basePoint'),
 	actions: {
 		judge: function() {

@@ -30,7 +30,7 @@
 </div>
 
 <div id="soulgemBox">
-<div id="soulgem">
+<div id="soulgem" {{bind-attr style=jemColorStyle}}>
 <img src="images/souljem.png">
 </div>	
 </div>	
@@ -45,7 +45,7 @@
 {{input value=answer }}
 <input id="judge" type="button" value="判定" {{action 'judge'}} >
 <p class="resultMessage">{{resultMessage}}</p>
-<p>{{jemColorCode}}</p>
+<p>{{jemColorStyle}}</p>
 </div>
 </div>
 {{#link-to 'gameOver'}}hogehoge{{/link-to}}
