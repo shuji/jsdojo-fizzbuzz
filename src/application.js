@@ -25,7 +25,6 @@ App.FizzBuzzRoute = Ember.Route.extend({
 // Route
 App.GameOverRoute = Ember.Route.extend({
 	model: function() {
-		console.debug("model");
 		return {};
 	}
 });
@@ -34,13 +33,12 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 
 	answer : '',
 	resultMessage: '',
-	jemColorCode : function(){
+	jemColorStyle : function(){
 		// 体力が低ければ彩度を下げる
 		var _point = this.get('point');
 		var _basePoint = this.get('besePoint');
 		// 基本値
 		var r = 247,g = 189 ,b = 185;
-		console.log(_point,_basePoint);
 		if(_point !== undefined) {
 			var mul = _point / _basePoint;
 			r *= mul;
@@ -53,7 +51,7 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 			return ("0"+result).slice(-2);
 		}
 
-		return '#'+exchangeRadix(r)+exchangeRadix(g)+exchangeRadix(b);
+		return 'background:#'+exchangeRadix(r)+exchangeRadix(g)+exchangeRadix(b);
 	}.property('model.point','model.basePoint'),
 	actions: {
 		judge: function() {

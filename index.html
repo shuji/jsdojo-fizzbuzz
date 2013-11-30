@@ -13,16 +13,39 @@
 </div>
 
 <div id="main">
+
+<div class="qb">
+<div class="head">
+
+<div class="eye left">
+<div class="small-eye"></div>
+<div class="reflection"></div>
+</div>
+<div class="eye right">
+<div class="small-eye"></div>
+<div class="reflection"></div>
+</div>
+
+</div>
+</div>
+
+<div id="soulgemBox">
+<div id="soulgem" {{bind-attr style=jemColorStyle}}>
+<img src="images/souljem.png">
+</div>	
+</div>	
+
 <div id="showNumberBox">
 <div id="showNumber">{{number}}</div>
 {{title}}
 </div>
 
+
 <div id="inputArea">
 {{input value=answer }}
 <input id="judge" type="button" value="判定" {{action 'judge'}} >
-<p>{{jemColorCode}}</p>
-<p>{{resultMessage}}</p>
+<p class="resultMessage">{{resultMessage}}</p>
+<p>{{jemColorStyle}}</p>
 </div>
 </div>
 {{#link-to 'gameOver'}}hogehoge{{/link-to}}
