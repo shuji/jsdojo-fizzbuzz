@@ -21,12 +21,16 @@
 <div id="inputArea">
 {{input value=answer }}
 <input id="judge" type="button" value="判定" {{action 'judge'}} >
-
+<p>{{jemColorCode}}</p>
 <p>{{resultMessage}}</p>
 </div>
 </div>
-
+{{#link-to 'gameOver'}}hogehoge{{/link-to}}
 </div><!-- /wrapper -->
+</script>
+
+<script type="text/x-handlebars"  data-template-name="gameOver">
+<h2>game over</h2>
 </script>
 <script type="text/javascript" src="./lib/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="./lib/handlebars-1.1.2.js"></script>
