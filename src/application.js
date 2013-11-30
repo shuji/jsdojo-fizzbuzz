@@ -9,6 +9,15 @@ App.FizzBuzzRoute = Ember.Route.extend({
 		console.debug("model");
 		return App.FizzBuzz.create({
 		});
+	},
+	setupController: function(controller, model) {
+		controller.set('model', model);
+		model.addObserver('point',model,function(sender, key, value, rev){
+			if(this.get('point') > 0) {
+				return;
+			}
+			alert('game over m9(^Д^)');
+		});
 	}
 });
 // Controller
@@ -46,5 +55,7 @@ App.FizzBuzzController = Ember.ObjectController.extend({
 			}
 			this.get('model').setNewNumer();
 		}
+	},
+	init : function () {
 	}
 });
